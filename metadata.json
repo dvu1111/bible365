@@ -1,0 +1,5 @@
+{
+  "name": "Daily Catholic Bible Readings",
+  "description": "A daily Bible reading plan application based on a 365-day schedule. It fetches and displays verses for each day's specified readings from a modern Bible translation.",
+  "requestFramePermissions": []
+}
