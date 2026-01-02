@@ -27,20 +27,19 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+          # Removed cache: 'npm' because it requires a lock file
 
       - name: Install dependencies
-        run: npm ci
+        # Use 'npm i' instead of 'npm ci' when no lock file is present
+        run: npm install
 
       - name: Build
-        # We add --base-href to ensure the app works on GitHub Pages sub-directories
-        # Replace 'bible365' with your actual repository name if different
+        # Ensure the base-href matches your GitHub repository name
         run: npm run build -- --base-href /bible365/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Your angular.json defines the base as ./dist
           path: './dist'
 
   deploy:
