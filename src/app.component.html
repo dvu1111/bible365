@@ -7,17 +7,17 @@
     </header>
 
     <div class="bg-white p-6 rounded-2xl shadow-lg border border-slate-200 mb-8">
-      <label for="day-select" class="block text-sm font-medium text-slate-700 mb-2">Select Day of the Year:</label>
+      <label for="day-select" class="block text-sm font-medium text-slate-700 mb-2">Select Date:</label>
       <select id="day-select" [value]="selectedDay()" (change)="onDayChange($event)" class="block w-full p-3 border border-slate-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg">
         @for (day of days; track day) {
-          <option [value]="day">Day {{ day }}</option>
+          <option [value]="day">{{ getDateLabel(day) }}</option>
         }
       </select>
       
       @if (currentReading(); as reading) {
         <div class="mt-4 p-4 bg-indigo-50 rounded-lg border border-indigo-200">
           <h2 class="text-xl font-bold text-indigo-900">{{ reading.period || 'Daily Reading' }}</h2>
-          <p class="text-indigo-700">Readings for Day {{ reading.day }}</p>
+          <p class="text-indigo-700">{{ getDateLabel(reading.day) }}</p>
         </div>
       }
     </div>
