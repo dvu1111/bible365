@@ -38,7 +38,7 @@
             } @else if (reading.content.error) {
               <p class="text-red-600 bg-red-100 p-3 rounded-md">{{ reading.content.error }}</p>
             } @else if (reading.content.value) {
-              <div class="prose prose-lg max-w-none font-serif text-slate-800 leading-relaxed" [innerHTML]="reading.content.value.text">
+              <div class="font-serif text-slate-800 leading-relaxed" [innerHTML]="reading.content.value.text">
               </div>
             }
           </div>
@@ -60,7 +60,7 @@
             } @else if (reading.content.error) {
               <p class="text-red-600 bg-red-100 p-3 rounded-md">{{ reading.content.error }}</p>
             } @else if (reading.content.value) {
-              <div class="prose prose-lg max-w-none font-serif text-slate-800 leading-relaxed" [innerHTML]="reading.content.value.text">
+              <div class="font-serif text-slate-800 leading-relaxed" [innerHTML]="reading.content.value.text">
               </div>
             }
           </div>
@@ -82,7 +82,7 @@
             } @else if (reading.content.error) {
               <p class="text-red-600 bg-red-100 p-3 rounded-md">{{ reading.content.error }}</p>
             } @else if (reading.content.value) {
-              <div class="prose prose-lg max-w-none font-serif text-slate-800 leading-relaxed" [innerHTML]="reading.content.value.text">
+              <div class="font-serif text-slate-800 leading-relaxed" [innerHTML]="reading.content.value.text">
               </div>
             }
           </div>
@@ -91,7 +91,7 @@
     </div>
 
     <footer class="text-center mt-12 py-4 border-t border-slate-200">
-      <p class="text-slate-500 text-sm">Powered by Angular & the Bible-API. Using the Douay-Rheims American Edition (DRA) translation.</p>
+      <p class="text-slate-500 text-sm">Powered by Angular. Readings sourced from Bolls Life API (RSV2CE).</p>
     </footer>
 
   </div>

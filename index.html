@@ -7,7 +7,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script>
     tailwind.config = {
       theme: {
@@ -24,6 +24,55 @@
     body {
       font-family: 'Inter', sans-serif;
     }
+    
+    /* --- Bolls Life Content Styles --- */
+    
+    /* Chapter divider */
+    .chapter-divider {
+      border: 0;
+      height: 1px;
+      background: #e2e8f0;
+      margin: 2rem 0;
+    }
+
+    /* Paragraphs for prose (narrative) */
+    .prose-paragraph {
+      font-family: 'Merriweather', serif;
+      font-size: 1.125rem; /* 18px */
+      line-height: 1.8;
+      color: #334155;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Blocks for poetry (Psalms, etc.) */
+    .poetry-block {
+      font-family: 'Merriweather', serif;
+      font-size: 1.125rem;
+      position: relative;
+    }
+
+    /* Verse Number Styling */
+    .verse-num {
+      color: #6366f1; /* Indigo 500 */
+      font-size: 0.75em;
+      font-weight: 700;
+      margin-right: 2px;
+      user-select: none;
+      vertical-align: super;
+    }
+
+    /* Text adjustments */
+    .verse-text {
+      color: #334155;
+    }
+    
+    /* Bolls returns <br> inside text sometimes; ensure it breaks properly */
+    .verse-text br {
+      display: block;
+      margin-top: 0.25em;
+      content: "";
+    }
+
   </style>
 <script type="importmap">
 {
