@@ -10,7 +10,7 @@
       <label for="day-select" class="block text-sm font-medium text-slate-700 mb-2">Select Date:</label>
       <select id="day-select" [value]="selectedDay()" (change)="onDayChange($event)" class="block w-full p-3 border border-slate-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 text-lg">
         @for (day of days; track day) {
-          <option [value]="day">{{ getDateLabel(day) }}</option>
+          <option [value]="day" [selected]="day === selectedDay()">{{ getDateLabel(day) }}</option>
         }
       </select>
       
