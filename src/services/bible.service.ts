@@ -230,14 +230,16 @@ export class BibleService {
         flushProse();
         
         // Render poetry block
+        // Removed mr-1 from verse-num
         html += `<div class="poetry-block mb-2 pl-4 md:pl-8 text-gray-800 leading-relaxed">
-                   <sup class="verse-num font-bold text-indigo-500 text-xs mr-1 align-top select-none">${v.verse}</sup>
+                   <sup class="verse-num font-bold text-indigo-500 text-xs align-top select-none">${v.verse}</sup>
                    <span class="verse-text italic">${v.text}</span>
                  </div>`;
       } else {
         // Accumulate prose
+        // Removed mr-0.5 from verse-num
         const verseHtml = `<span class="verse-wrapper">
-                             <sup class="verse-num font-bold text-indigo-500 text-xs mr-0.5 align-top select-none">${v.verse}</sup>
+                             <sup class="verse-num font-bold text-indigo-500 text-xs align-top select-none">${v.verse}</sup>
                              <span class="verse-text">${v.text}</span>
                            </span>`;
         proseBuffer.push(verseHtml);
